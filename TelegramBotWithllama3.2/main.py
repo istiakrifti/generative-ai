@@ -88,25 +88,25 @@ async def helper(message: types.message):
 #     print(f">>> chatGPT: \n\t{reference.response}")
 #     await bot.send_message(chat_id=message.chat.id, text=reference.response)
 
-@dispatcher.message(Command('clear'))
-async def clear(message: types.message):
-    clear_past()
-    await message.answer(f"I have cleared the past conversation and context")
+# @dispatcher.message(Command('clear'))
+# async def clear(message: types.message):
+#     clear_past()
+#     await message.answer(f"I have cleared the past conversation and context")
 
-@dispatcher.message(Command('start'))
-async def welcome(message: types.message):
-    await message.answer(f"Hello!!!\nI am an Echo Bot.\nPowered by aiogram.\nHow can I assist you? To get help use /help command.")
+# @dispatcher.message(Command('start'))
+# async def welcome(message: types.message):
+#     await message.answer(f"Hello!!!\nI am an Echo Bot.\nPowered by aiogram.\nHow can I assist you? To get help use /help command.")
 
-@dispatcher.message(Command('help'))
-async def helper(message: types.message):
-    help_command = """
-    Hi! I am a telegram bot created by Rifti. Please follow these commands -
-    /start - To start a conversation
-    /clear - To clear past conversation and context
-    /help - To get help 
-    I think this helps.
-    """
-    await message.answer(help_command)
+# @dispatcher.message(Command('help'))
+# async def helper(message: types.message):
+#     help_command = """
+#     Hi! I am a telegram bot created by Rifti. Please follow these commands -
+#     /start - To start a conversation
+#     /clear - To clear past conversation and context
+#     /help - To get help 
+#     I think this helps.
+#     """
+#     await message.answer(help_command)
 
 @dispatcher.message()
 async def chat(message: types.message):
